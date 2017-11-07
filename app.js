@@ -1,8 +1,10 @@
 const express = require('express'); // library
 const nunjucks = require('nunjucks'); // templating library
 const volleyball = require('volleyball'); // logger library
-
+const routes = require('./routes');
 const app = express();
+
+app.use('/', routes);
 app.use(volleyball);
 app.set('view engine', 'html');
 app.engine('html', nunjucks.render);  // res.render
@@ -26,7 +28,7 @@ app.use(function(req, res, next) {
   console.log('Someone made a request!');
   next();
 })
-
+/*
 app.get('/', function(req, res, next) {
   //res.send("Something else...");
   res.render('index', {title: 'An Example', people: [{name: 'Gandalf'}, {name: 'Hermione'}, {name: 'Frodo'}], ruth: 'is a person'});
@@ -43,7 +45,7 @@ app.get('/special/', function(req, res, next) {
 app.get('/special/holidays', function(req, res, next) {
   res.send("This is the special holiday area");
 })
-
+*/
 app.listen(3000, function() {
   // does something
   console.log("Bloop");
