@@ -6,7 +6,7 @@ const app = express();
 app.use(volleyball);
 app.set('view engine', 'html');
 app.engine('html', nunjucks.render);  // res.render
-nunjucks.configure('views');
+nunjucks.configure('views', {noCache: true});
 
 app.use(function (req, res, next) {
     //console.log(req.method);
