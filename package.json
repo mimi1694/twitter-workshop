@@ -1,6 +1,7 @@
 {
   "name": "twitter-js",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "a cool tweet app",
   "main": "index.js",
   "dependencies": {
@@ -20,4 +21,16 @@
     "url": "https://github.com/mimi1694/twitter-workshop/issues"
   },
   "homepage": "https://github.com/mimi1694/twitter-workshop#readme"
+=======
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+>>>>>>> 30e91f1a5e5bd590bc2d7d6d97ced7d3e59678d9
 }
